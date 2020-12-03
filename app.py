@@ -6,11 +6,11 @@ import traceback
 from flask_restful import reqparse
 app = Flask(__name__)
 
-@app.route("/", methods=['GET'])
+"""@app.route("/", methods=['GET'])
 def hello():
-    return "hey"
+    return "hey"""
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
 	lr = joblib.load("model.pkl")
 	if lr:
