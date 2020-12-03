@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello():
     return "hey"""
 
-@app.route('/', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
 	lr = joblib.load("model.pkl")
 	if lr:
